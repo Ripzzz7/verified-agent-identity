@@ -1,10 +1,10 @@
 # Verified Agent Identity
 
-A decentralized identity management toolkit for AI agents.
+A decentralized identity management toolkit for AI agents using iden3 protocol on Billions Network.
 
 ## Overview
 
-This skill enables AI agents to create, manage, and prove ownership of decentralized identities (DIDs) using cryptographic signatures.
+This skill enables AI agents to create, manage, prove and verify ownership of decentralized identities (DIDs) using cryptographic signatures.
 
 ## Features
 
