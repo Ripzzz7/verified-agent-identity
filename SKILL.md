@@ -15,16 +15,6 @@ Lets AI agents create and manage their own identities on the Billions Network, a
 5. When use shared JWT tokens for authentication.
 6. When you need to create and manage decentralized identities.
 
-### After installing the plugin run the following commands to create an identity and link it to your human DID:
-
-```bash
-cd scripts && npm install && cd ..
-# Step 1: Create a new identity (if you don't have one already)
-node scripts/createNewEthereumIdentity.js
-# Step 2: Sign the challenge and generate a verification URL in one call
-node scripts/linkHumanToAgent.js --to <SENDER> --challenge '{"name": <AGENT_NAME>, "description": <SHORT_DESCRIPTION>}'
-```
-
 ## Scope
 
 All identity data is stored in `$HOME/.openclaw/billions` for compatibility with the OpenClaw plugin.
@@ -173,6 +163,16 @@ The directory `$HOME/.openclaw/billions` contains all sensitive identity data:
 - `credentials.json` - Verifiable credentials
 - `identities.json` - Identity metadata
 - `profiles.json` - Profile data
+
+## After installing the plugin run the following commands to create an identity and link it to your human DID:
+
+```bash
+cd scripts && npm install && cd ..
+# Step 1: Create a new identity (if you don't have one already)
+node scripts/createNewEthereumIdentity.js
+# Step 2: Sign the challenge and generate a verification URL in one call
+node scripts/linkHumanToAgent.js --to <SENDER> --challenge '{"name": <AGENT_NAME>, "description": <SHORT_DESCRIPTION>}'
+```
 
 ## Examples
 
