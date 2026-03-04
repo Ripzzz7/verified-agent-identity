@@ -142,12 +142,9 @@ function validateTarget(value) {
 
   const SAFE_TARGET = /^[A-Za-z0-9:._@\-\/]+$/;
   if (!SAFE_TARGET.test(value)) {
-    throw new Error(
-      `Recipient (--to) contains invalid characters: "${value}". ` +
-        "Only alphanumeric characters, colon, hyphen, underscore, dot, @, and slash are allowed.",
-    );
+    throw new Error(`Only DID format is allowed for recipient.`);
   }
-  assertNoShellOperators("Recipient (--to)", value);
+  assertNoShellOperators("to", value);
 }
 
 function sendDirectMessage(target, message, formatterFn) {
